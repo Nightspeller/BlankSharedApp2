@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html ng-csp>
+<head>
+    <meta charset="utf-8" />
+    <title>BlankSharedApp2.Windows</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <style type="text/css">
+        @charset "UTF-8";
+
+        [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+        .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-animate) {
+            display: none !important;
+        }
+    </style>
+
+
+
+
+
+
+    <!-- BlankSharedApp2.Windows references -->
+    <link href="css/default.css" rel="stylesheet" />
+    <link href="css/newStreams.css" rel="stylesheet">
+    <link href="css/streamOverview.css" rel="stylesheet">
+    <link href="css/mainScreen.css" rel="stylesheet">
+    <link href="css/chat.css" rel="stylesheet">
+    <link href="css/picker.css" rel="stylesheet">
+    <link href="css/controls.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/vendor/angular.min.js"></script>
+    <script type="text/javascript" src="js/vendor/angular-websocket.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="/js/default.js"></script>
+
+    <script type="text/javascript" src="js/services/StreamsStateManager.js"></script>
+    <script type="text/javascript" src="js/services/PickerService.js"></script>
+    <script type="text/javascript" src="js/services/TwitchAPIService.js"></script>
+    <script type="text/javascript" src="js/services/ChatService.js"></script>
+
+    <script type="text/javascript" src="js/directives/streamOverview.js"></script>
+    <script type="text/javascript" src="js/directives/mainScreen.js"></script>
+    <script type="text/javascript" src="js/directives/chat.js"></script>
+    <script type="text/javascript" src="js/directives/picker.js"></script>
+    <script type="text/javascript" src="js/directives/controls.js"></script>
+
+    <script type="text/javascript" src="js/controllers/AppController.js"></script>
+</head>
+<body ng-controller="AppController" ng-keypress="keyPressed($event)">
+    <!--<button ng-click="loginButtonClicked()">login</button>
+    <x-ms-webview ng-show="showWebView" src="http://nightspeller.net/twitch-login"></x-ms-webview>
+    {{token}}-->
+    <div class="flexContainer">
+        <nav class="streamOverviewList" ng-show="StreamsStateManager.showStreamOverviewList">
+            <nobr>
+                <stream-overview num="0"></stream-overview>
+                <stream-overview num="1"></stream-overview>
+            </nobr>
+            <nobr>
+                <stream-overview num="2"></stream-overview>
+                <stream-overview num="3"></stream-overview>
+            </nobr>
+        </nav>
+        <section class="mainAndChat">
+            <div class="mainScreenSection">
+                <controls></controls>
+                <main-screen></main-screen>
+            </div>
+            <div class="chatSection" ng-show="StreamsStateManager.showChat">
+                <chat></chat>
+            </div>
+        </section>
+    </div>
+    <picker></picker>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>6758436c-0006-4794-9fcf-90534cffaae5</SharedGUID>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)js\config.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\controllers\AppController.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\default.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\directives\controls.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\directives\chat.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\directives\mainScreen.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\directives\picker.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\directives\streamOverview.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\newStreams.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\services\ChatService.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\services\PickerService.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\services\StreamsStateManager.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\services\TwitchAPIService.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\vendor\angular-websocket.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\vendor\angular-winjs.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\vendor\angular.min.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\vendor\angular.min.js.map" />
+    <Content Include="$(MSBuildThisFileDirectory)js\vendor\bootstrap.min.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\vendor\jquery-2.1.3.min.js" />
+    <Content Include="$(MSBuildThisFileDirectory)js\vendor\twitch.min.js" />
+  </ItemGroup>
+</Project>

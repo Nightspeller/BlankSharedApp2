@@ -1,0 +1,16 @@
+<div class="chat">
+    <label class="channelWrapper">
+        <input class="channelInput" type="text" data-ng-model="channel" data-ng-keypress="sendChannel($event)" />
+        <button data-ng-click="sendChannel({keyCode: 13})">X</button>
+    </label>
+    <div class="chatMessages">
+        <div class="message" data-ng-repeat="message in ChatService.messages">
+            <span class="author">{{message.author}}:</span>
+            <span class="text" data-ng-bind-html="message.text"></span>
+        </div>
+    </div>
+    <label class="inputWrapper">
+        <input class="messageInput" type="text" data-ng-model="chatMessage" data-ng-keypress="sendMessage($event)" />
+        <button data-ng-click="sendMessage({keyCode: 13})">X</button>
+    </label>
+</div>
