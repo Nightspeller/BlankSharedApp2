@@ -6,29 +6,38 @@
             templateUrl: 'templates/chat.html',
             controller: function ($scope) {
                 $scope.ChatService = ChatService;
-
-                $scope.sendMessage = function ($event) {
-                    if ($event.keyCode === 13) {
-                        ChatService.sendMessage($scope.chatMessage)
-                    }
-                }
-
-                $scope.sendChannel = function ($event) {
-                    if ($event.keyCode === 13) {
-                        ChatService.updateChannel($scope.channel)
-                    }
-                }
             },
             link: function (scope, elem, attrs) {
-                var chatContainer = elem[0].getElementsByClassName('chatMessages')[0];
 
-                scope.$watch('ChatService', function () {
-                    chatContainer.scrollTop = chatContainer.scrollHeight + 10000;
-                    if (chatContainer.scrollTop !== chatContainer.scrollHeight) {
+                for (var i = 0; i < 4; i++) {
+                    var chatWebView = document.createElement('x-ms-webview');
+                    chatWebView.style.height = '100%';
+                    chatWebView.style.width = '100%';
+                    chatWebView.style.display = 'none';
+                    chatWebView.id = 'chatContainer'+i;
+                    elem[0].getElementsByClassName("chatContainers")[0].appendChild(chatWebView);
+                }
 
+                scope.$watch('ChatService.channels', function (newValue, oldValue) {
+                    for (var i = 0; i < 4; i++) {
+                        if (newValue[i] !== oldValue[i]) {
+                            elem[0].querySelector("#chatContainer" + i).navigate('http://www.twitch.tv/' + newValue[i] + '/chat');
+                        }
                     }
                 }, true);
 
+                scope.$watch('ChatService.activeChannelId', function (newValue, oldValue) {
+                    if (newValue !== oldValue) {
+                        scope.showChat(newValue);
+                    }
+                }, true);
+
+                scope.showChat = function(chatId) {
+                    for (var i = 0; i < 4; i++) {
+                        elem[0].querySelector("#chatContainer" + i).style.display = 'none';
+                    }
+                    elem[0].querySelector("#chatContainer" + chatId).style.display = 'block';
+                }
             }
         };
     }]);

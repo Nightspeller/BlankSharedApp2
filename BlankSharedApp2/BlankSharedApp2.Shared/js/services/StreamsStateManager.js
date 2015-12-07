@@ -53,7 +53,7 @@
                     for (var i = 0; i < 4; i++) {
                         if (this.streams[i].status === 'active') this.streams[i].status = 'overview';
                     }
-                    ChatService.updateChannel('#' + this.streams[channelId].channel);
+                    ChatService.setActiveChannel(channelId);
                 }
                 if (status === 'preview') {
                     for (var i = 0; i < 4; i++) {
@@ -74,6 +74,7 @@
                 self.streams[channelId].info = options;
                 self.setStreamStatus(channelId, currentStatus);
             });
+            ChatService.updateChannels(channelId, channelName);
         };
 
         this.swapActiveAndPreview = function () {

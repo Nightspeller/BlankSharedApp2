@@ -1,46 +1,16 @@
-.chat {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+﻿.chat {
   height: 100%;
-  color: #c0c0c0;
-  border: 2px dashed #800080;
-  padding: 0;
-}
-.chat .chatMessages {
-  flex-grow: 1000;
-  background: #19191f;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  margin-bottom: 2px;
-}
-.chat .chatMessages .message {
-  color: #fff;
-}
-.chat .chatMessages .message .author {
-  color: #ff0;
-}
-.chat .inputWrapper,
-.chat .channelWrapper {
-  flex: 2 0 auto;
-  display: flex;
-  flex-direction: row;
   width: 100%;
-  border: 2px solid #ff0;
+  display: flex;
+  flex-flow: column;
 }
-.chat .inputWrapper .messageInput,
-.chat .channelWrapper .messageInput,
-.chat .inputWrapper .channelInput,
-.chat .channelWrapper .channelInput {
-  border: none;
-  flex-grow: 1000;
-  padding: 0;
-  background: #232329;
-}
-.chat .inputWrapper button,
-.chat .channelWrapper button {
+.chat .chatSelector {
   flex: 0 1 auto;
+  text-align: center;
+}
+.chat .chatSelector button {
+  min-width: 23%;
+}
+.chat .chatContainers {
+  flex: 1 1 auto;
 }
