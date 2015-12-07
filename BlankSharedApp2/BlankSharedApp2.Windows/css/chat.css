@@ -6,11 +6,13 @@
 }
 .chat .chatSelector {
   flex: 0 1 auto;
+  padding: 3px;
   text-align: center;
 }
 .chat .chatSelector button {
   min-width: 23%;
 }
 .chat .chatContainers {
+  padding: 0 3px 3px 3px;
   flex: 1 1 auto;
 }
