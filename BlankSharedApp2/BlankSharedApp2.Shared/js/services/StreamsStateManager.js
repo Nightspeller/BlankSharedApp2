@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
     angular.module(appConfig.appName).service('StreamsStateManager', ['$timeout', '$rootScope', 'ChatService', 'TwitchAPIService', function ($timeout, $rootScope, ChatService, TwitchAPIService) {
 
         this.showStreamOverviewList = true;

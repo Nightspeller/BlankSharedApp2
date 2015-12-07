@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
     angular.module(appConfig.appName).directive('picker', ['PickerService', function (PickerService) {
         return {
             restrict: 'E',

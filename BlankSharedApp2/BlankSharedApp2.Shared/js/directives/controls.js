@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
     angular.module(appConfig.appName).directive('controls', ['StreamsStateManager', function (StreamsStateManager) {
         return {
             restrict: 'E',

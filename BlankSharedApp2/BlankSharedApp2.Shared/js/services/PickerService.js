@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
     angular.module(appConfig.appName).service('PickerService', ['StreamsStateManager', 'TwitchAPIService', function (StreamsStateManager, TwitchAPIService) {
 
         this.statesStack = ['sources'];
@@ -50,20 +50,20 @@
                 self.content = [
                     {
                         title: 'Twitch.tv',
-                        description: 'Largest gaming service',
+                        description: 'Biggest gaming service',
                         img: 'images/logo_twitch.jpg',
                         nextState: 'twitchGames'
-                    },{
-                        title: 'Cybergame.tv',
-                        description: 'Russian gaming service',
-                        img: 'images/logo_cybergame.jpg',
-                        nextState: {state: 'pickingDone'}
-                    },{
-                        title: 'Goodgame.tv',
-                        description: 'Goodgame sucks',
-                        img: 'images/logo_goodgame.png',
-                        nextState: {state: 'pickingDone'}
-                    }
+                    }//,{
+                    //    title: 'Cybergame.tv',
+                    //    description: 'Russian gaming service',
+                    //    img: 'images/logo_cybergame.jpg',
+                    //    nextState: {state: 'pickingDone'}
+                    //},{
+                    //    title: 'Goodgame.tv',
+                    //    description: 'Goodgame sucks',
+                    //    img: 'images/logo_goodgame.png',
+                    //    nextState: {state: 'pickingDone'}
+                    //}
                 ];
             }
 

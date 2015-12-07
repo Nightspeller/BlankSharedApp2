@@ -1,6 +1,6 @@
 ﻿var appConfig = (function () {
     var appName = 'streamViewer';
-    var dependancies = ['ngWebSocket'];
+    var dependancies = [];
 
     return {
         appName: appName,

@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
     angular.module(appConfig.appName).directive('mainScreen', ['$timeout', 'StreamsStateManager', function ($timeout, StreamsStateManager) {
         return {
             restrict: 'E',

@@ -50,12 +50,13 @@
     <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
     <PackageCertificateKeyFile>BlankSharedApp2_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <Content Include="css\bootstrap.min.css" />
     <Content Include="css\chat.css" />
     <Content Include="css\controls.css" />
     <Content Include="css\controls.styl" />
@@ -69,30 +70,26 @@
     <Content Include="css\streamOverview.css" />
     <Content Include="css\streamOverview.styl" />
     <Content Include="default.html" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="images\logo.png" />
     <Content Include="images\logo_cybergame.jpg" />
     <Content Include="images\logo_goodgame.png" />
     <Content Include="images\logo_twitch.jpg" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
+    <Content Include="images\splashscreen_black.png" />
     <Content Include="images\storelogo.png" />
     <Content Include="css\default.css" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="templates\controls.html" />
     <Content Include="templates\chat.html" />
     <Content Include="templates\main-screen.html" />
     <Content Include="templates\picker.html" />
     <Content Include="templates\stream-overview.html" />
-    <None Include="BlankSharedApp2_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.WinJS.2.0, Version=1.0" />
   </ItemGroup>
-  <Import Project="..\BlankSharedApp2.Shared\BlankSharedApp2.Shared.projitems" Label="Shared" />
+  <Import Project="..\BlankSharedApp2.Shared\StreamViewer.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below then uncomment
        that target and the DisableFastUpToDateCheck PropertyGroup. 

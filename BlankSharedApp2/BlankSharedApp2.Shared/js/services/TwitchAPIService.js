@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
     angular.module(appConfig.appName).service('TwitchAPIService', ['$q', function ($q) {
 
         this.prepareChannel = function (channelId, channelName) {

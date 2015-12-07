@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
     angular.module(appConfig.appName).service('ChatService', [function () {
         var self = this;
 

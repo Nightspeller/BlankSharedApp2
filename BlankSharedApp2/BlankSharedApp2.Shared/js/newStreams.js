@@ -1,3 +1,3 @@
-var app = angular.module('streamViewer', []);
+﻿var app = angular.module('streamViewer', []);
 
 

@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
     angular.module(appConfig.appName).directive('streamOverview', ['StreamsStateManager', 'PickerService', 'TwitchAPIService', function (StreamsStateManager, PickerService, TwitchAPIService) {
         return {
             restrict: 'E',

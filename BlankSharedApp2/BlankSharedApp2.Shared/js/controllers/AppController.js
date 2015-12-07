@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
     angular.module(appConfig.appName).controller('AppController', ['$scope', '$timeout', 'StreamsStateManager', function ($scope, $timeout, StreamsStateManager) {
 
         $scope.keyPressed = function ($event) {

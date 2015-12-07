@@ -18,11 +18,6 @@
         }
     </style>
 
-
-
-
-
-
     <!-- BlankSharedApp2.Windows references -->
     <link href="css/default.css" rel="stylesheet" />
     <link href="css/newStreams.css" rel="stylesheet">
@@ -33,7 +28,6 @@
     <link href="css/controls.css" rel="stylesheet">
 
     <script type="text/javascript" src="js/vendor/angular.min.js"></script>
-    <script type="text/javascript" src="js/vendor/angular-websocket.js"></script>
 
     <script src="js/config.js"></script>
     <script src="/js/default.js"></script>
@@ -52,9 +46,6 @@
     <script type="text/javascript" src="js/controllers/AppController.js"></script>
 </head>
 <body ng-controller="AppController" ng-keypress="keyPressed($event)">
-    <!--<button ng-click="loginButtonClicked()">login</button>
-    <x-ms-webview ng-show="showWebView" src="http://nightspeller.net/twitch-login"></x-ms-webview>
-    {{token}}-->
     <div class="flexContainer">
         <nav class="streamOverviewList" ng-show="StreamsStateManager.showStreamOverviewList">
             <nobr>

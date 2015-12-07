@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
     angular.module(appConfig.appName).directive('chat', ['ChatService', function (ChatService) {
         return {
             restrict: 'E',
